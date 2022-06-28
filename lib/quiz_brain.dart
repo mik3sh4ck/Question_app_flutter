@@ -36,11 +36,22 @@ class QuizBrain{
       _nQuestion++;
     }
   }
+  bool endQuestion(){
+    if(_nQuestion == _questionBank.length - 1 ){
+      return true;
+    }else{
+      return false;
+    }
+  }
   String getQuestiontext(){
     return _questionBank[_nQuestion].question;
   }
 
   bool getQuestionAnswer(){
     return _questionBank[_nQuestion].answer;
+  }
+
+  void reset(){
+    _nQuestion = 0;
   }
 }
